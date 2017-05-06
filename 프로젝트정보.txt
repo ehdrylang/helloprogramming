@@ -1,0 +1,4 @@
+1. anaconda 4.6.1 / python 3.6.0 설치
+2. 장고 설치
+3. superuser jdk
+4. settings.py 에서 변경사항 확인
