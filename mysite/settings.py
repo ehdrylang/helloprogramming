@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'hp.apps.HpConfig', # 앱등록 추가
+    'hp', # 앱등록 추가
 ]
 
 MIDDLEWARE = [
