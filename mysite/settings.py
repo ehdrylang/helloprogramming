@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hp', # 앱등록 추가
+    'board.apps.BoardConfig', # 앱등록
 ]
 
 MIDDLEWARE = [
