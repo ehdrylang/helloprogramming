@@ -14,6 +14,8 @@ class Post(models.Model):
     content = models.TextField('CONTENT')
     create_date = models.DateTimeField('Create Date',auto_now_add=True)
     modify_date = models.DateTimeField('Modify Date',auto_now=True)
+    # 메인 사진
+    # 소개 사진
 
     class Meta:
         verbose_name = 'post'
@@ -24,7 +26,7 @@ class Post(models.Model):
     def __str__(self):
         return self.title
     def get_absolute_url(self):
-        return reverse('blog:post_detail',arg=(self.slug,))
+        return reverse('board:post_detail', args=(self.slug,))
     def get_previous_post(self):
         return self.get_previous_by_modify_date()
     def get_next_post(self):
