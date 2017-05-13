@@ -3,6 +3,7 @@ from django.utils.encoding import python_2_unicode_compatible
 
 from django.db import models
 from django.core.urlresolvers import reverse
+from hp.models import Product
 
 # Create your models here.
 
@@ -14,6 +15,7 @@ class Post(models.Model):
     content = models.TextField('CONTENT')
     create_date = models.DateTimeField('Create Date',auto_now_add=True)
     modify_date = models.DateTimeField('Modify Date',auto_now=True)
+    product = models.OneToOneField(Product, default="")
     # 메인 사진
     # 소개 사진
 
