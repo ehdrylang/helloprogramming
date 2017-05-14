@@ -1,3 +1,22 @@
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!-- css,javascript연결 -->
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'board/detail.css'%}" />
+<script src="{% static 'board/detail.js'%}"></script>
+<!-- css,javascript연결 끝 -->
+
 <h2>{{object.title}}</h2>
 <p class="other_posts">
   {% if object.get_previous_by_modify_date %}
@@ -14,3 +33,99 @@
 <div class="body">
   {{object.content|linebreaks }}
 </div>
+
+<!-- 상품디테일 -->
+<div class="container">
+	<div class="row">
+    <div class="col-xs-6 item-photo">
+      <!-- 상품 메인사진 -->
+        <img style="max-width:100%;" src="https://ak1.ostkcdn.com/images/products/8818677/Samsung-Galaxy-S4-I337-16GB-AT-T-Unlocked-GSM-Android-Cell-Phone-85e3430e-6981-4252-a984-245862302c78_600.jpg" />
+    </div>
+    <div class="col-xs-6">
+        <!-- Datos del vendedor y titulo del producto -->
+        <h3>오브젝트의 제목오브젝트의 제목오브젝트의 제목오브젝트의 제목</h3>
+        <h5>간단한 설명</h5>
+
+        <!-- Precios -->
+        <div class="section">
+          <h6 class="title-price"><small>Price</small></h6>
+          <h3 style="margin-top:0px;"> 50,000원</h3>
+        </div>
+        <!-- 3단위로 ,찍는 방법 -->
+        <!-- 링크 : http://stackoverflow.com/questions/346467/format-numbers-in-django-templates -->
+        <!-- <div class="section">
+            <h6 class="title-attr" style="margin-top:15px;" ><small>COLOR</small></h6>
+            <div>
+                <div class="attr" style="width:25px;background:#5a5a5a;"></div>
+                <div class="attr" style="width:25px;background:white;"></div>
+            </div>
+        </div>
+        <div class="section" style="padding-bottom:5px;">
+            <h6 class="title-attr"><small>CAPACIDAD</small></h6>
+            <div>
+                <div class="attr2">16 GB</div>
+                <div class="attr2">32 GB</div>
+            </div>
+        </div> -->
+        <div class="section" style="padding-bottom:20px;">
+            <h6 class="title-attr"><small>수량</small></h6>
+            <div>
+                <div class="btn-minus"><span class="glyphicon glyphicon-minus"></span></div>
+                <input value="1" />
+                <div class="btn-plus"><span class="glyphicon glyphicon-plus"></span></div>
+            </div>
+        </div>
+        <div class="section">
+          <h6 class="title-attr"><small>Total Price</small></h6>
+          <div>
+            <h2 style="color:red">가격 * 수량</h2>
+          </div>
+        </div>
+
+        <!-- Botones de compra -->
+        <div class="section" style="padding-bottom:20px;">
+            <button class="btn btn-success"><span style="margin-right:20px" class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> 장바구니 결제하기</button>
+            <h6><a href="#"><span class="glyphicon glyphicon-heart-empty" style="cursor:pointer;"></span> 야야야야야야야야야야야야야야</a></h6>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="menu-items">
+            <li class="active">Detalle del producto</li>
+            <li>Garantía</li>
+            <li>Vendedor</li>
+            <li>Envío</li>
+        </ul>
+        <div style="width:100%;border-top:1px solid silver">
+            <p style="padding:15px;">
+                <small>
+                Stay connected either on the phone or the Web with the Galaxy S4 I337 from Samsung. With 16 GB of memory and a 4G connection, this phone stores precious photos and video and lets you upload them to a cloud or social network at blinding-fast speed. With a 17-hour operating life from one charge, this phone allows you keep in touch even on the go.
+
+                With its built-in photo editor, the Galaxy S4 allows you to edit photos with the touch of a finger, eliminating extraneous background items. Usable with most carriers, this smartphone is the perfect companion for work or entertainment.
+                </small>
+            </p>
+            <small>
+            <ul>
+                <li>Super AMOLED capacitive touchscreen display with 16M colors</li>
+                <li>Available on GSM, AT&T, T-Mobile and other carriers</li>
+                <li>Compatible with GSM 850 / 900 / 1800; HSDPA 850 / 1900 / 2100 LTE; 700 MHz Class 17 / 1700 / 2100 networks</li>
+                <li>MicroUSB and USB connectivity</li>
+                <li>Interfaces with Wi-Fi 802.11 a/b/g/n/ac, dual band and Bluetooth</li>
+                <li>Wi-Fi hotspot to keep other devices online when a connection is not available</li>
+                <li>SMS, MMS, email, Push Mail, IM and RSS messaging</li>
+                <li>Front-facing camera features autofocus, an LED flash, dual video call capability and a sharp 4128 x 3096 pixel picture</li>
+                <li>Features 16 GB memory and 2 GB RAM</li>
+                <li>Upgradeable Jelly Bean v4.2.2 to Jelly Bean v4.3 Android OS</li>
+                <li>17 hours of talk time, 350 hours standby time on one charge</li>
+                <li>Available in white or black</li>
+                <li>Model I337</li>
+                <li>Package includes phone, charger, battery and user manual</li>
+                <li>Phone is 5.38 inches high x 2.75 inches wide x 0.13 inches deep and weighs a mere 4.59 oz </li>
+            </ul>
+            </small>
+        </div>
+    </div>
+	</div>
+</div>
+<!-- 상품디테일 끝 -->
