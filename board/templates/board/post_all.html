@@ -1,4 +1,28 @@
-<h1>게시글</h1>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'board/list.css'%}" />
+<div class="row">
+  <div class="col-xs-4">
+  </div>
+  <div class="col-xs-4">
+    <h2><span class="label label-default center-block">마스크 ({{count}})</span></h3>
+  </div>
+  <div class="col-xs-4">
+  </div>
+</div>
+
 {% for post in posts %}
   <h2><a href='{{post.get_absolute_url}}'>{{post.title}}</a></h2>
   {{post.modify_date|date:"N d, Y"}}
@@ -7,14 +31,134 @@
   </p>
 {% endfor %}
   <br />
-  <div>
-    <span>
-      {% if page_obj.has_previous %}   <!--page_obj는 장고의 Page객체가 들어있는 컨택스트 변수 -->
-        <a href="page={{page_obj.previous_page_number}}">PreviousPage</a>
-      {% endif%}
-      Page {{page_obj.number}} of {{page_obj.paginator.num_pages}}
-      {% if page_obj.has_next %}
-        <a href="page={{page_obj.next_page_number}}">NextPage</a>
-      {% endif%}
-    </span>
-  </div>
+<!-- 상품보여주기 -->
+<div class="container">
+	<div class="row">
+		<div class="row">
+        <div class="col-xs-12 col-sm-3 col-md-3">
+            <a href="#">
+                <img src="http://wanderluxe.theluxenomad.com/wp-content/uploads/2014/10/http-www.urchinbali.comgallery.jpg" class="img-responsive img-box img-thumbnail">
+            </a>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-9">
+            <div class="list-group">
+                <div class="list-group-item">
+                    <!-- 사진 -->
+                    <div class="row-picture">
+                        <a href="#" title="sintret">
+                            <img class="circle img-thumbnail img-box" src="http://sintret.com/img/andy.jpg" alt="sintret">
+                        </a>
+                    </div>
+                    <!-- 내용 -->
+                    <div class="row-content">
+                        <div class="list-group-item-heading">
+                                <h6>카테고리 / 용도</h6>
+                        </div>
+                        <small>
+                            <i class="glyphicon glyphicon-triangle-right"></i><span class="buycount">(312 구매중)</span>
+                            <br>
+                            <span class="explore"><h5>가격정보 50,000원</h5></span>
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <h4><a href="#">상품 제목이 들어가는 부분 a태그로 되어있음</a></h4>
+            <p>상품에 대한 간략한 소개가 들어가는 부분입니다.상품에 대한 간략한 소개가 들어가는 부분입니다.상품에 대한 간략한 소개가 들어가는 부분입니다.</p>
+        </div>
+    </div>
+    <hr>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-3 col-md-3">
+            <a href="#">
+                <img src="http://wanderluxe.theluxenomad.com/wp-content/uploads/2014/09/http-barbacoabali.com_.jpg" class="img-responsive img-box img-thumbnail">
+            </a>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-9">
+            <div class="list-group">
+                <div class="list-group-item">
+                    <div class="row-picture">
+                        <a href="#" title="sintret">
+                            <img class="circle img-thumbnail img-box" src="http://sintret.com/img/andy.jpg" alt="sintret">
+                        </a>
+                    </div>
+                    <div class="row-content">
+                        <div class="list-group-item-heading">
+                            <a href="#" title="sintret">
+                                <small>sintret</small>
+                            </a>
+                        </div>
+                        <small>
+                            <i class="glyphicon glyphicon-time"></i> 1 month ago via <span class="twitter"> <i class="fa fa-twitter"></i> <a target="_blank" href="https://twitter.com/sintret" alt="sintret" title="sintret">@sintret</a></span>
+                            <br>
+                            <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="#">Explore 9 places </a></span>
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <h4><a href="#">Top 8 Best Bali Restaurants - WanderLuxe Magazine</a></h4>
+            <p>We know that there’s tons to noms in Bali, but what’s the best and where are they? Here are our top 8 Seminyak Bali restaurants to visit.</p>
+        </div>
+    </div>
+    <hr>
+
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-3 col-md-3">
+            <a href="#">
+                <img src="http://i.huffpost.com/gen/2038950/thumbs/s-BANGKOK-NOODLES-large.jpg" class="img-responsive img-box img-thumbnail">
+            </a>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-9">
+            <div class="list-group">
+                <div class="list-group-item">
+                    <div class="row-picture">
+                        <a href="#" title="sintret">
+                            <img class="circle img-thumbnail img-box" src="http://sintret.com/img/andy.jpg" alt="sintret">
+                        </a>
+                    </div>
+                    <div class="row-content">
+                        <div class="list-group-item-heading">
+                            <a href="#" title="sintret">
+                                <small>sintret</small>
+                            </a>
+                        </div>
+                        <small>
+                            <i class="glyphicon glyphicon-time"></i> 1 month ago via <span class="twitter"> <i class="fa fa-twitter"></i> <a target="_blank" href="https://twitter.com/sintret" alt="sintret" title="sintret">@sintret</a></span>
+                            <br>
+                            <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="#">Explore 9 places </a></span>
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <h4><a href="#">These Are The Best Noodle Spots In Bangkok</a></h4>
+            <p>BANGKOK (AP) — With its fluorescent bulbs and cafeteria-style tables, the Bangkok restaurant Raan Jay Fai wouldn't win any awards for interior decorating.              But that hasn't deterred Martha Stewart, one of the restaurant's many fans...</p>
+        </div>
+    </div>
+    <hr>
+	</div>
+</div>
+<!-- 상품보여주기 끝 -->
+  <!-- 페이지처리 -->
+  {% if is_paginated %}
+  <ul class="pagination">
+    {% if page_obj.has_previous %}
+      <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&laquo;</span></li>
+    {% endif %}
+    {% for i in paginator.page_range %}
+      {% if page_obj.number == i %}
+        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if page_obj.has_next %}
+      <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&raquo;</span></li>
+    {% endif %}
+  </ul>
+  {% endif %}
+  <!-- 페이지처리 끝 -->
