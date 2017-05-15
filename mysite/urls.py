@@ -16,9 +16,11 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from hp.views import ProductLV, ProductDV
+from mysite.views import HomeView
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+
+    url(r'^$', HomeView.as_view(), name='home'), #홈화면
     url(r'^product/', include('hp.urls', namespace='product')),
     url(r'^board/', include('board.urls', namespace='board')),
 ]
