@@ -39,7 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'hp', # 앱등록 추가
     'board.apps.BoardConfig', # 앱등록
+    'disqus',
+    'django.contrib.sites',
 ]
+
+DISQUS_WEBSITE_SHORTNAME = 'finedust-1'
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

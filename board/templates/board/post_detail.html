@@ -118,4 +118,15 @@
 	</div>
 </div>
 <!-- 상품디테일 끝 -->
+<!-- 댓글 -->
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <br />
+        {% load disqus_tags %}
+        {% disqus_show_comments %}
+    </div>
+  </div>
+</div>
+<!-- 댓글 끝 -->
 {%endblock%}
